@@ -1,3 +1,5 @@
+set nu
+
 set nocompatible              " required
 filetype off                  " required
 
@@ -66,4 +68,32 @@ Plugin 'altercation/vim-colors-solarized'
 call togglebg#map("<F5>")
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+" Toggle nerdtree with F10
+map <F10> :NERDTreeToggle<CR>
+" Current file in nerdtree
+map <F9> :NERDTreeFind<CR>
 
+
+set splitbelow
+set splitright
+
+
+
+set backspace=2   " Backspace deletes like most programs in insert mode
+set nocompatible  " Use Vim settings, rather then Vi settings
+set nobackup
+set nowritebackup
+set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
+set history=500
+set ruler         " show the cursor position all the time
+set showcmd       " display incomplete commands
+set incsearch     " do incremental searching
+set hlsearch      " highlight matches
+set laststatus=2  " Always display the status line
+set autowrite     " Automatically :write before running commands
+
+
+nnoremap <F5> :<C-u> ! python3 %<CR>
+" nnoremap <buffer> <F4> :exec '!python3' shellescape(@%, 1)<cr>
+"command R !./%
+"nmap <silent> <unique> <F4> :Bexec()<CR>
